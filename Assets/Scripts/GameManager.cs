@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     public Camera camera;
     public Vector3 sala108;
     public Vector3 sala106;
-    public Vector3 korytarz;
     public static string obecnyPokoj = "Sala108";
     RaycastHit hit;  
     private string activeItem;
@@ -108,6 +107,7 @@ public class GameManager : MonoBehaviour
             activeItem = "";
         }
 
+        Debug.Log(obecnyPokoj);
         if (obecnyPokoj == "Sala108")
         {
             camera.transform.position = Vector3.MoveTowards(camera.transform.position, sala108, 200f * Time.deltaTime);
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
         }
         else if(obecnyPokoj == "Korytarz")
         {
-            camera.transform.position = Vector3.MoveTowards(camera.transform.position, korytarz, 200f * Time.deltaTime);
+            camera.transform.position = Vector3.MoveTowards(camera.transform.position, new Vector3(player.transform.position.x - 44f, player.transform.position.y + 48f, player.transform.position.z + 65f), 200f * Time.deltaTime);
             //camera.transform.position = Vector3.Lerp(korytarz, camera.transform.position, 200f * Time.deltaTime);
         }
 
