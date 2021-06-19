@@ -16,10 +16,12 @@ public class MenuManager : MonoBehaviour
     {
         //HideOptions();
         //ShowLoadingScreen();
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("Sala108"));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("MainScene"));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("NPC", LoadSceneMode.Additive));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("Sala108", LoadSceneMode.Additive));
         scenesToLoad.Add(SceneManager.LoadSceneAsync("Korytarz", LoadSceneMode.Additive));
         scenesToLoad.Add(SceneManager.LoadSceneAsync("Sala106", LoadSceneMode.Additive));
-        //StartCoroutine(LoadingScreen());
+        StartCoroutine(LoadingScreen());
     }
 
     IEnumerator LoadingScreen()

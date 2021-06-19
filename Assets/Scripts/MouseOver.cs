@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseOver : MonoBehaviour
 {
+    
     void OnMouseEnter()
     {
         transform.GetComponent<Outline>().OutlineWidth = 1.7f;

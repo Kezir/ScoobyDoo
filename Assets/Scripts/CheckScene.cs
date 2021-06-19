@@ -7,9 +7,7 @@ public class CheckScene : MonoBehaviour
     // Start is called before the first frame update
 
     public Material current;
-    public float transparent;
     private bool isTransparent;
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +24,19 @@ public class CheckScene : MonoBehaviour
                 current.renderQueue = -1;
                 isTransparent = true;
                 GameManager.obecnyPokoj = gameObject.name;
+                /*if(gameObject.name == "Korytarz")
+                {
+                    PlayerController.Instance.AnimDeskorolkaStart();
+                    PlayerController.Instance.walk = false;
+                    PlayerController.Instance.agent.speed = 0;
+
+                }
+                else if(PlayerController.Instance.walk == false)
+                {                   
+                    PlayerController.Instance.AnimDeskorolkaKoniec();
+                    PlayerController.Instance.walk = true;                                    
+                }
+                */
             }
         }
     }
@@ -48,8 +59,5 @@ public class CheckScene : MonoBehaviour
             }
         }
     }
-    void UpdateMaterial()
-    {
 
-    }
 }
