@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 77f73ceda2dd7bf4ba9f38ab1ea2b204
   - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: d45a67f0e625f50499ef9207fe077fb7
+  - enabled: 1
     path: Assets/Scenes/Sala108.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -17,4 +20,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sala106.unity
     guid: 1e2d194a2751bc24bab68fcd309d1e24
+  - enabled: 1
+    path: Assets/Scenes/Sala113.unity
+    guid: f00b77d422cdc8b45a013e3f399c4b6b
+  - enabled: 1
+    path: Assets/Scenes/Sala114.unity
+    guid: f1ef5405514274d4ebdd1784e50a3efc
+  - enabled: 1
+    path: Assets/Scenes/Sala114B.unity
+    guid: 6e28302bdc51def43815faff85143d4e
+  - enabled: 1
+    path: Assets/Scenes/Pietro0.unity
+    guid: 5aa44b0392c592f4b876177889809e51
+  - enabled: 1
+    path: Assets/Scenes/Sala112.unity
+    guid: 8f16f570abe26ba42913ed85499c67bc
+  - enabled: 1
+    path: Assets/Scenes/NPC.unity
+    guid: 07714945b610eda449755892a98872c9
   m_configObjects: {}

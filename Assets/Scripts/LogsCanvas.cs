@@ -5,11 +5,12 @@ using UnityEngine;
 public class LogsCanvas : MonoBehaviour
 {
     private Vector3 startPos;
+    public GameObject npcCanvas;
     public GameObject target;
-    public GameObject player;
-    public GameManager gameManager;
-    public GameObject opcje;
-    public GameObject npcOdpowiedz;
+    public GameObject canvasPrzyciski;
+    //public GameObject player;
+    //public GameObject opcje;
+   // public GameObject npcOdpowiedz;
     private Vector3 targetPos;
     // Start is called before the first frame update
     void Start()
@@ -28,17 +29,21 @@ public class LogsCanvas : MonoBehaviour
 
     public void ExitGraphics()
     {
-        gameManager.DestroyGraphics();
-        player.GetComponent<PlayerController>().canMove = true;
-        gameObject.SetActive(false);
-        opcje.SetActive(false);
-        npcOdpowiedz.SetActive(false);
+        GameManager.Instance.DestroyGraphics();
+        PlayerController.Instance.canMove = true;
+        npcCanvas.SetActive(false);
+        canvasPrzyciski.SetActive(true);
+        
+        //gameObject.SetActive(false);
+        //opcje.SetActive(false);
+        //npcOdpowiedz.SetActive(false);
         gameObject.transform.position = startPos;
     }
     public void Exit()
     {
-        player.GetComponent<PlayerController>().canMove = true;
+        PlayerController.Instance.canMove = true;
         gameObject.SetActive(false);
+        canvasPrzyciski.SetActive(true);
         gameObject.transform.position = startPos;
     }
 }
